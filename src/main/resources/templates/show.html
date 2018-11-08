@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<div th:replace="base:: headStuff"></div>
 <body>
+<div th:replace="base:: nav"></div>
+
     <a href="/">Show all Courses</a><br/>
 
     Title: <span th:text="${course.title}"></span><br/>
     Instructor: <span th:text="${course.instructor}"></span><br/>
     Description: <span th:text="${course.description}"></span><br/>
     Credits: <span th:text="${course.credit}"></span><br/>
-    <a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>
+
+    <!--<a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>-->
+
+    <a href="/logout">Logout</a>
 </body>
 </html>

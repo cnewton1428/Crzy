@@ -21,6 +21,9 @@
         Credits: <input type="text" th:field="*{credit}"/>
         <span th:if="${#fields.hasErrors('credit')}" th:errors="*{credit}"></span><br/>
 
+        <!--User Name: <input type="text" th:field="*{username}"/>-->
+        <!--<span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span><br/>-->
+
         <input type="submit" value="Submit"/>
     </form>
 </body>
